@@ -1,0 +1,116 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "bpe_tram_audio_server"
+version = "0.0.1"
+description = "This is an example of a server for providing TTS services; taking text and returning audio. Intended for the Minecraft mod Create Tram Additions."
+readme = "README.md"
+authors = [
+  { name = "BipolarExpedition(Doc1979)" },
+  { name = "Doc1979", email = "lastdoc39@gmail.com" }
+]
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+# keywords = []
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+dependencies = [
+  "fastapi",
+  "edge-tts",
+  "uvicorn[standard]",
+  "pydub"
+]
+
+
+[tool.poetry]
+name = "bpe_tram_audio_server"
+version = "0.0.1"
+description = "This is an example of a server for providing TTS services; taking text and returning audio. Intended for the Minecraft mod Create Tram Additions."
+readme = "README.md"
+authors = [
+  "BipolarExpedition(Doc1979)",
+  "Doc1979 <lastdoc39@gmail.com>"
+]
+license = "MIT"
+homepage = "https://github.com/BipolarExpedition/tram_audio_server"
+repository = "https://github.com/BipolarExpedition/tram_audio_server"
+keywords = []  # Add keywords if needed
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent"
+]
+exclude = [
+  ".secrets",
+  ".credentials",
+  ".vscode",
+  ".idea"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+fastapi  = "*"
+edge-tts = "*"
+uvicorn = { extras = ["standard"], version = "^0.23" }
+pydub = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+ruff = "*"
+
+
+
+[project.urls]
+homepage = "https://github.com/BipolarExpedition/tram_audio_server"
+repository = "https://github.com/BipolarExpedition/tram_audio_server"
+issues = "https://github.com/BipolarExpedition/tram_audio_server/issues"
+# documentation = "https://readthedocs.org"
+# changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[project.scripts]
+tram_audio_server = "bpe_tram_audio_server.cli:main"
+
+[tool.poetry.scripts]
+tram_audio_server = "bpe_tram_audio_server.cli:main"
+
+# [project.gui-scripts]
+# tram_audio_server_gui = "bpe_tram_audio_server.gui-tk:main"
+
+#[project.optional-dependencies]
+# gui = ["tkinter"]
+# cli = [
+#   "rich",
+#   "click",
+# ]
+
+# [tool.hatch.build]
+# skip-excluded-dirs = true
+# exclude = [
+#   ".secrets",
+#   ".credentials",
+#   ".vscode",
+#   ".idea"
+# ]
+#
+# [tool.hatch.envs.default]
+#
+#
+# [tool.hatch.envs.test]
+# dependencies = [
+#   "ruff",
+#   "pytest"
+# ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v -s"
+

@@ -13,20 +13,20 @@ async def get_root(text: str, lang: Optional[str] = None, bgTasks: BackgroundTas
 
     Args:
         text (str): The text to be processed.
-        lang (str): The language of the text.
-        bgTasks (BackgroundTasks): A collection of tasks to be executed in the background.
+        lang (Optional[str]): The language of the text. Optional.
+        bgTasks (BackgroundTasks): A collection of tasks to be executed in the background. Optional.
 
     Returns:
         dict: A dictionary containing the processed text and language.
     
     Tasks:
-        TODO: Validate request
-        TODO: Check if request is cached. If so, return cached response.
-        TODO: Generate TTS
-        TODO: Convert to WAV
-        TODO: Cache response
-        TODO: Schedule cache cleanup if needed
-        TODO: Return WAV
+        TODO: #1 Validate request
+        TODO: #2 Check if request is cached. If so, return cached response.
+        TODO: #3 Generate TTS
+        TODO: #4 Convert to WAV
+        TODO: #5 Cache response
+        TODO: #6 Schedule cache cleanup if needed
+        TODO: #7 Return WAV
     """
 
     
